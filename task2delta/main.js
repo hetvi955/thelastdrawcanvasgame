@@ -108,15 +108,10 @@ function obs2(){
         var color="";
        
         for(var i=0;i<30;i++){
-            //here we solve the the position of the sqaure
-            /*
-                for example the position of the middle of the circle is 193 and 80 is the distance of square rotating  in the middle of the circle.*/
+           
             var xx=80*Math.cos(this.rot*(Math.PI/180))+this.xpos;
             var yy=80*Math.sin(this.rot*(Math.PI/180))+coords.y_axis(this.y_axis);
-            //then the first 10 square color is yello and second 10ns is red then last is yellow 10ns
-            //if i value is less than 10 the color of the sqaure is yellow then if its greater than 10 ang less than
-            //20th sq color is yellow
-            //then else if i value is greater than or equal to 20 the color is deepsky blue
+         
             if(i<10){
                 color="lime";
             }else if(i>=10 && i<20){
@@ -124,7 +119,6 @@ function obs2(){
             }else{
                 color="deepskyblue";
             }
-            //then we check the coordinates of player and squares rotation in the circle if meet this condition
             if(xx<=player.xpos&&xx+10>=player.xpos&&yy<=player.ypos&&yy+10>=player.ypos){
                 //then we check if the color is not equal to player then the player is dead.
               if(player.color!=color&&game.gameover==false){
